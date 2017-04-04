@@ -37,10 +37,12 @@ import I18n from "redux-i18n/immutable"
 
 import {translations} from "./translations"
 
+import {styles} from "./styles"
+
 class MainApp extends React.Component {
   render() {
     return (
-      <I18n translations={translations}>
+      <I18n translations={translations} styles={styles}>
         <div>
             <h1>My Project</h1>
             {this.props.children}
@@ -62,6 +64,16 @@ export const translations = {
 }
 ```
 
+Where *styles* is a dictionary similar to this:
+
+```javascript
+export const styles = {
+  "base": {
+    "appbar": "baseClass"
+  }
+}
+```
+
 ## Redux Reducer
 
 You'll need to add the **i18nState** reducer in your *combineReducers*.
@@ -79,11 +91,12 @@ const appReducer = combineReducers({
 })
 ```
 
-This allows you to access the *lang* attribute in your component, which contains the current language:
+This allows you to access the *lang* *theme* attribute in your component, which contains the current language:
 
 ```javascript
 export default connect(state => ({
   lang: state.i18nState.lang,
+  theme: state.i18nState.theme,
 }))(Home)
 ```
 
@@ -93,7 +106,8 @@ You can access *I18n's* functions using your component's context. For example:
 
 ```javascript
 Home.contextTypes = {
-  t: React.PropTypes.func.isRequired
+  t: React.PropTypes.func.isRequired,
+  c: React.PropTypes.func.isRequired
 }
 ```
 
@@ -111,7 +125,19 @@ render() {
     )
 }
 ```
+...you will then be able to use the *c* method in your component.
 
+```javascript
+render() {
+    return (
+      <div>
+        <strong>Your current theme, is: {this.props.theme}</strong><br/>
+	<p className={this.context.c("base")}></p>
+        <button onClick={this.changeLanguage.bind(this)}>Change Language</button>
+      </div>
+    )
+}
+```
 Translate date formats.
 
 ```javascript
