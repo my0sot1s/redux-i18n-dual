@@ -1,4 +1,4 @@
-# This's a folk version of redux-i18n
+# This's a fork version of redux-i18n
 - Follow it at: [redux-i18n](https://www.npmjs.com/package/redux-i18n)
 
 # Description
@@ -12,7 +12,7 @@
 ## Installation
 - follow it add to package.json
 ```
-"redux-i18n-dual":"git+https://github.com/my0sot1s/redux-i18n-dual.git"
+"\"redux-i18n-dual"\":"\"git+https://github.com/my0sot1s/redux-i18n-dual.git"\"
 ```
 
 ## Features
@@ -34,9 +34,9 @@
 The package provides a parent component to encapsulate your application as well as helpers functions to translate your project.
 
 ```javascript
-import I18n from "redux-i18n-dual"
+import I18nDual from "redux-i18n-dual"
 // with Immutable.js:
-import I18n from "redux-i18n-dual/immutable"
+import I18nDual from "redux-i18n-dual/immutable"
 
 import {translations} from "./translations"
 
@@ -45,12 +45,12 @@ import {styles} from "./styles"
 class MainApp extends React.Component {
   render() {
     return (
-      <I18n translations={translations} styles={styles}>
+      <I18nDual translations={translations} styles={styles}>
         <div>
             <h1>My Project</h1>
             {this.props.children}
         </div>
-      </I18n>
+      </I18nDual>
     )
   }
 }
@@ -135,7 +135,7 @@ render() {
     return (
       <div>
         <strong>Your current theme, is: {this.props.theme}</strong><br/>
-	<p className={this.context.c("base")}></p>
+	    <p className={this.context.c("base")}></p>
         <button onClick={this.changeLanguage.bind(this)}>Change Language</button>
       </div>
     )
