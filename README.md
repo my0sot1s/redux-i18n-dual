@@ -7,9 +7,9 @@
 ![downloads](https://img.shields.io/npm/dm/redux-i18n.svg)
 
 ## Installation
-
+- follow it add to package.json
 ```
-npm i redux-i18n --save
+redux-i18:https://github.com/my0sot1s/redux-i18n-dual.git
 ```
 
 ## Features
