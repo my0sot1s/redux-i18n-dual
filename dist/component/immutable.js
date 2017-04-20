@@ -20,7 +20,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = (0, _reactRedux.connect)(function (state) {
   return {
     lang: state.getIn(['i18nState', 'lang']),
+    theme: state.getIn(['i18nState', 'theme']),
     translations_reducer: state.getIn(['i18nState', 'translations']),
+    styles_reducer: state.getIn(['i18nState', 'styles']),
     forceRefresh: state.getIn(['i18nState', 'forceRefresh'])
   };
 })(_component2.default);

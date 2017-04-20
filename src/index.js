@@ -4,6 +4,6 @@
  */
 
 export default from './component'
-export {i18nState} from './reducer'
-export { setLanguage, setTranslations, setTheme} from './actions'
+export { i18nState } from './reducer'
+export { setLanguage, setStyles, setTranslations, setTheme } from './actions'
 

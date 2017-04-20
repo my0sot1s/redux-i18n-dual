@@ -4,5 +4,5 @@
  */
 
 export default from './component/immutable'
-export {i18nState} from './reducer/immutable'
-export { setLanguage, setTheme} from './actions'
+export { i18nState } from './reducer/immutable'
+export { setLanguage, setStyles, setTranslations, setTheme } from './actions'

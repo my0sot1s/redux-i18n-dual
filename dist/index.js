@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.setTheme = exports.setTranslations = exports.setLanguage = exports.i18nState = exports.default = undefined;
+exports.setTheme = exports.setTranslations = exports.setStyles = exports.setLanguage = exports.i18nState = exports.default = undefined;
 
 var _reducer = require('./reducer');
 
@@ -20,6 +20,12 @@ Object.defineProperty(exports, 'setLanguage', {
   enumerable: true,
   get: function get() {
     return _actions.setLanguage;
+  }
+});
+Object.defineProperty(exports, 'setStyles', {
+  enumerable: true,
+  get: function get() {
+    return _actions.setStyles;
   }
 });
 Object.defineProperty(exports, 'setTranslations', {

@@ -22,6 +22,7 @@ exports.default = (0, _reactRedux.connect)(function (state) {
     lang: state.i18nState.lang,
     theme: state.i18nState.theme,
     translations_reducer: state.i18nState.translations,
+    styles_reducer: state.i18nState.styles,
     forceRefresh: state.i18nState.forceRefresh
   };
 })(_component2.default);
