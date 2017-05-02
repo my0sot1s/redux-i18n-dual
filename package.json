@@ -1,6 +1,6 @@
 {
   "name": "redux-i18n-dual",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A simple and powerful package for translate your react applications.",
   "main": "./dist/index.js",
   "repository": {
@@ -61,12 +61,13 @@
     "jsdom-no-contextify": "^3.1.0",
     "mocha": "^2.5.3",
     "moment": "~2.10.6",
-    "react": "^15.0.2",
+    "react": "^15.5.8",
     "react-addons-test-utils": "^15.1.0",
-    "react-dom": "^15.0.2",
+    "react-dom": "^15.5.8",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-immutablejs": "0.0.8",
+    "prop-types": "^15.5.8",
     "redux-promise-middleware": "^3.0.0",
     "redux-thunk": "^2.1.0",
     "webpack": "^1.13.0"

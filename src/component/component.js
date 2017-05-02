@@ -7,6 +7,7 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import deepForceUpdate from 'react-deep-force-update'
 import { setForceRefresh } from '../actions'
+import PropTypes from 'prop-types'
 
 class I18n extends React.Component {
 
@@ -126,14 +127,14 @@ class I18n extends React.Component {
 }
 
 I18n.childContextTypes = {
-  t: React.PropTypes.func.isRequired,
-  c: React.PropTypes.func.isRequired
+  t: PropTypes.func.isRequired,
+  c: PropTypes.func.isRequired
 }
 
 I18n.propTypes = {
-  translations: React.PropTypes.object.isRequired,
-  styles: React.PropTypes.object.isRequired,
-  useReducer: React.PropTypes.bool
+  translations: PropTypes.object.isRequired,
+  styles: PropTypes.object.isRequired,
+  useReducer: PropTypes.bool
 }
 
 I18n.defaultProps = {
